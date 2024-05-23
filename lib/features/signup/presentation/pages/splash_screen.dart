@@ -68,6 +68,16 @@ class SplashScreenState extends State<SplashScreen> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
+            'Cat Breeds',
+            style: TextStyle(
+              color: AppPallete.gradient3,
+              letterSpacing: 1,
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          SizedBox(height: 10),
+          Text(
             'All About Cat Breeds, Right Here',
             style: TextStyle(
               color: AppPallete.gradient3,

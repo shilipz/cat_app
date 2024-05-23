@@ -49,9 +49,12 @@ class _LoginPageState extends State<LoginPage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                const Text('Cat Breeds App',
+                    style:
+                        TextStyle(fontSize: 30, fontWeight: FontWeight.w700)),
                 const Text('Login',
                     style:
-                        TextStyle(fontSize: 50, fontWeight: FontWeight.bold)),
+                        TextStyle(fontSize: 50, fontWeight: FontWeight.w300)),
                 const SizedBox(height: 30),
                 AuthField(
                   hintText: 'Email',
