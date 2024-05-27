@@ -2,6 +2,7 @@ import 'package:cat_app/features/home/presentation/pages/image_screen.dart';
 import 'package:flutter/material.dart';
 
 class BreedCard extends StatelessWidget {
+  final String otherDetail;
   final String breedImage;
   final String breedName;
   final String description;
@@ -13,7 +14,8 @@ class BreedCard extends StatelessWidget {
       required this.breedName,
       required this.description,
       required this.origin,
-      required this.lifespan});
+      required this.lifespan,
+      required this.otherDetail});
 
   @override
   Widget build(BuildContext context) {
@@ -25,6 +27,7 @@ class BreedCard extends StatelessWidget {
             context,
             MaterialPageRoute(
               builder: (context) => BreedImagesScreen(
+                otherDetail: otherDetail,
                 breedName: breedName,
                 breedImage: breedImage,
                 description: description,

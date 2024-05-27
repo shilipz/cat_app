@@ -6,8 +6,7 @@ sealed class CatState {}
 final class CatInitial extends CatState {}
 
 class CatLoadedState extends CatState {
-  final List<Root?> cats;
-  
+  final List<CatModel?> cats;
 
   CatLoadedState(this.cats);
 }

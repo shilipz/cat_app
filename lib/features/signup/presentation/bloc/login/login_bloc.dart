@@ -11,14 +11,12 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
     on<LoginEvent>((event, emit) {
       on<AuthLogin>((event, emit) async {
         emit(LoginLoading());
-        try {
-          await firebaseAuthServicesInstance.signIn(
-            event.email,
-            event.password,
-          );
+        final userLoggedIn = await firebaseAuthServicesInstance.signIn(
+            event.email, event.password);
+        if (userLoggedIn != null) {
           emit(LoginSuccess());
-        } catch (e) {
-          emit(LoginFailure(e.toString()));
+        } else {
+          emit(LoginFailure('Invalid login credentials'));
         }
       });
     });

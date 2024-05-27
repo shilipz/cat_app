@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:bloc/bloc.dart';
 import 'package:cat_app/features/signup/domain/auth.dart';
 import 'package:flutter/material.dart';
@@ -22,7 +20,9 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
         } else {
           emit(AuthFailure('Email id invalid or already in use'));
         }
-      } catch (e) {}
+      } catch (e) {
+        AuthFailure(e.toString());
+      }
     });
   }
 }

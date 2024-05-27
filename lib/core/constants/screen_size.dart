@@ -9,5 +9,5 @@ class ScreenSize {
 
   static double get screenWidth => _mediaQueryData.size.width;
   static double get screenHeight => _mediaQueryData.size.height;
-  static double get TextScaler => _mediaQueryData.textScaler as double;
+  static double get textScaler => _mediaQueryData.textScaler as double;
 }

@@ -1,8 +1,7 @@
 import 'package:bloc/bloc.dart';
-import 'package:cat_app/features/home/domain/functions.dart';
+import 'package:cat_app/features/home/data/services.dart';
 import 'package:cat_app/features/home/domain/model/catdetalils.dart';
 import 'package:flutter/material.dart';
-
 part 'cat_event.dart';
 part 'cat_state.dart';
 
